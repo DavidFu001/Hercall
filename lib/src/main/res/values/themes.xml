@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@drawable/activity_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowAnimationStyle">@style/AnimationOpenPage</item>
+    </style>
+
+    <style name="Theme.SplashActivity">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="Theme.TitleText">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/p_bold</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="android:lineSpacingMultiplier">1.05</item>
+    </style>
+
+    <style name="Theme.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/p_regular</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="android:lineSpacingMultiplier">1.05</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Theme.MediumText">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/p_medium</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="android:lineSpacingMultiplier">1.05</item>
+    </style>
+
+
+    <style name="Theme.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/p_regular</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="IMPopAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anl_push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/anl_push_up_out</item>
+    </style>
+
+
+    <style name="AnimationOpenPage" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/anl_push_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/anl_push_right_out</item>
+    </style>
+
+    <style name="CountryTopStyle" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anl_push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/anl_push_up_out</item>
+    </style>
+
+    <style name="LoadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="DialogCustomStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="DialogBottomInStyle"  parent="Theme.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anl_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anl_push_bottom_out</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+</resources>
