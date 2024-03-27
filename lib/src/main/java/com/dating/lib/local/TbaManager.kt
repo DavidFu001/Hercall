@@ -34,6 +34,9 @@ object TbaManager {
     }
 
     fun uploadInstallEvent(refer: ReferrerDetails) {
+        if(true){
+            return
+        }
         uploadTrackJson("安装") {
             putOpt("silicon", JSONObject().apply {
                 putOpt("griffin", "build/${Build.ID}")//系统构建版本，Build.ID， 以 build/ 开头
@@ -62,12 +65,18 @@ object TbaManager {
     }
 
     fun uploadSessionRequest() {
+        if(true){
+            return
+        }
         uploadTrackJson("Session") {
             putOpt("mollie", JSONObject())
         }
     }
 
     fun uploadGlobalParam() {
+        if(true){
+            return
+        }
         val arrays = mutableListOf<Pair<String, Any>>().apply {
             add("uid" to myUid())
             add("ip_country" to LocalManager.localeCountry)
@@ -102,6 +111,9 @@ object TbaManager {
     private fun commitGlobalByBundle(
         name: String, bundle: Bundle
     ) {
+        if(true){
+            return
+        }
         uploadTrackJson("打点 $name${
             if (!bundle.isEmpty) " param = ${
                 bundle.keySet().map { "$it=${bundle.get(it)}" }
@@ -243,5 +255,8 @@ object TbaManager {
  *tba日志上传
  */
 fun tbaPost(event: String, vararg pair: Pair<String, Any> = arrayOf()) {
+    if(true){
+        return
+    }
     TbaManager.commitTrackByBundle(name = event, bundle = bundleOf(*pair), needPrefix = true)
 }

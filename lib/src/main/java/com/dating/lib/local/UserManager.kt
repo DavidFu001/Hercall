@@ -1,6 +1,7 @@
 package com.dating.lib.local
 
 import com.dating.lib.bean.UserBean
+import com.dating.lib.im.RongCloudManager
 
 
 object UserManager {
@@ -56,6 +57,7 @@ object UserManager {
 
     fun logOut() {
         userInfo = null
+        RongCloudManager.logOutRongCloud()
     }
 }
 

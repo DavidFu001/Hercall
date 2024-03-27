@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_48sdp"
+        android:background="@color/whiteAlpha80"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/flHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="@dimen/_47sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/home_selector" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flMatch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/match"
+                android:layout_width="@dimen/_47sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/match_selector" />
+
+        </FrameLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clChat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/message"
+                android:layout_width="@dimen/_47sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chat_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUnReadCount"
+                style="@style/Theme.TextView"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/shape_im_unread_count"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_3sdp"
+                android:paddingVertical="@dimen/_1sdp"
+                android:text="12"
+                android:textColor="@color/white"
+                android:textSize="6sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/message"
+                app:layout_constraintTop_toTopOf="@id/message"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/flMe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/mine"
+                android:layout_width="@dimen/_47sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/me_selector" />
+
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivActivityFloat"
+        android:layout_width="70dp"
+        android:visibility="gone"
+        android:layout_height="70dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_210sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

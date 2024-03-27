@@ -92,11 +92,10 @@ fun decode(originData: String): String {
     runCatching {
         if (originData.isNotEmpty()) {
             val lastInt = originData.last().toString().toInt()
-            val firstTime =
-                originData.removeRange(originData.length - lastInt - 1, originData.length)
+            val firstTime = originData.substring(lastInt, originData.length - 1)
             val top2 = firstTime.substring(0, 2)
             val end2 = firstTime.substring(firstTime.length - 2, firstTime.length)
-            val center = firstTime.substring(3, firstTime.length - 3)
+            val center = firstTime.substring(2, firstTime.length - 2)
             result = sb.append(end2).append(center).append(top2).toString().decodeData()
         }
     }

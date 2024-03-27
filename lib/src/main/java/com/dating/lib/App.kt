@@ -10,6 +10,7 @@ import com.adjust.sdk.Adjust
 import com.adjust.sdk.AdjustConfig
 import com.adjust.sdk.LogLevel
 import com.dating.lib.App.Companion.appContext
+import com.dating.lib.im.RongCloudManager
 import com.dating.lib.local.ActivityStackManager
 import com.dating.lib.local.ReferManager
 import com.dating.lib.utils.logAdjust
@@ -52,7 +53,7 @@ class App : Application(), CoroutineScope by MainScope() {
     }
 
     private fun initRongIM() {
-//        RongCloudManager.configRYunIM()
+        RongCloudManager.configRYunIM()
     }
 
 

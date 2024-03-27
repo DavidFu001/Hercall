@@ -8,7 +8,7 @@
     <color name="colorAccentAlpha60">#6661f2d4</color>
     <color name="colorTextPrimary">@color/black</color>
     <color name="colorTextPrimaryDark">#333333</color>
-    <color name="colorTextSecondary">#888888</color>
+    <color name="colorTextSecondary">#999999</color>
     <color name="transparent">#00000000</color>
     <color name="white">#ffffff</color>
     <color name="whiteAlpha90">#17ffffff</color>

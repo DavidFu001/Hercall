@@ -11,25 +11,25 @@ open class UserBean(
     // 用户id
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "uid")
-    @SerializedName("pexis")
+    @SerializedName("galasis")
     var uid: Int = 0,
     // 用户昵称
     @ColumnInfo(name = "nickname")
-    @SerializedName("replrpets")
+    @SerializedName("retruise")
     var nickname: String = "",
     // 用户状态：0: 空闲 1：繁忙 2：离线 3：未审核(主播注册后未审核通过)
     @ColumnInfo(name = "accStatus")
-    @SerializedName("jacket")
+    @SerializedName("sneiceships")
     var accStatus: Int = 4,
     // 国籍
     @ColumnInfo(name = "userCountry")
-    @SerializedName("etches")
+    @SerializedName("pyawer")
     var userCountry: String? = "",
     //匹配用的字段
-    @SerializedName("maill")
+    @SerializedName("daills")
     val matchUploadId: Int = 0,
     //匹配用的字段
-    @SerializedName("crill")
+    @SerializedName("pest")
     val anchorCountry: String? = "",
     // 性别：0：保密 1：男 2：女
     @ColumnInfo(name = "sex")
@@ -37,24 +37,24 @@ open class UserBean(
     var sex: Int = 0,
     // 年龄，默认18
     @ColumnInfo(name = "age")
-    @SerializedName("nozotal")
+    @SerializedName("beke")
     var age: Int = 18,
     // 头像
     @ColumnInfo(name = "avatar")
-    @SerializedName("exset")
+    @SerializedName("superinrvals")
     var avatar: String? = "",
     // 个人简介
     @ColumnInfo(name = "introduce")
-    @SerializedName("stfings")
+    @SerializedName("sueges")
     var introduce: String? = "",
     // 剩余金币数
-    @SerializedName("choisons")
+    @SerializedName("cgue")
     var coin: String? = "",
     // 融云IMToken
-    @SerializedName("brks")
+    @SerializedName("saoast")
     val imToken: String? = "",
     // 用户会话Token，放至header（注册、登录和刷新token无此参数，不传），用于身份验证
-    @SerializedName("outode")
+    @SerializedName("disvices")
     val token: String? = "",
     //设备是否已经注册
     @SerializedName("has_register")
@@ -63,27 +63,27 @@ open class UserBean(
     @SerializedName("shids")
     val notDisturb: Boolean = false,
     @ColumnInfo(name = "userLevel")
-    @SerializedName("level")
+    @SerializedName("unctories")
     var userLevel: Int = 0, //用户等级
-    @SerializedName("left_time")
+    @SerializedName("sioliters")
     var leftTime: Int = 0, //用户免费通话次数
 
     //************主播列表新增字段***********/
-    @SerializedName("executives")
+    @SerializedName("sotal")
     val price: Int = 0,
-    @SerializedName("skains")
+    @SerializedName("commases")
     val recommend: Boolean = false,
     @ColumnInfo(name = "inBlack")
     @SerializedName("in_black")
     var inBlack: Boolean = false, //是否拉黑
     @ColumnInfo(name = "isLike")
-    @SerializedName("is_like")
+    @SerializedName("slainders")
     var isLike: Boolean = false, //是否关注
     @ColumnInfo(name = "images")
     @SerializedName("images")
     val images: List<FileBean>? = emptyList(),
     @ColumnInfo(name = "videos")
-    @SerializedName("hashraw")
+    @SerializedName("callitter")
     val videos: List<FileBean>? = emptyList(),
     @ColumnInfo(name = "impressions")
     @SerializedName("impression")

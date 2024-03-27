@@ -4,10 +4,8 @@ import android.content.Context
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.Window
 import android.view.WindowManager
 import android.view.WindowManager.LayoutParams
-import androidx.annotation.StyleRes
 import androidx.appcompat.app.AlertDialog
 import androidx.viewbinding.ViewBinding
 import com.dating.lib.R
@@ -15,7 +13,7 @@ import java.lang.reflect.ParameterizedType
 
 
 abstract class BaseMviDialog<VB : ViewBinding>(
-    context: Context, private val isBottom: Boolean,
+    context: Context, private val isBottom: Boolean = false, private val cancelAble: Boolean = true
 ) : AlertDialog(context, if (isBottom) R.style.DialogBottomInStyle else R.style.DialogCustomStyle) {
 
     val mBinding by lazy {
@@ -33,8 +31,6 @@ abstract class BaseMviDialog<VB : ViewBinding>(
         super.onCreate(savedInstanceState)
         setContentView(mBinding.root)
         window?.let { window ->
-            window.requestFeature(Window.FEATURE_NO_TITLE)
-            window.decorView.setPadding(0, 0, 0, 0)
             val lp = window.attributes
             lp.width = LayoutParams.MATCH_PARENT
             lp.height = LayoutParams.WRAP_CONTENT
@@ -44,6 +40,8 @@ abstract class BaseMviDialog<VB : ViewBinding>(
             //保证EditText能弹出键盘
             window.clearFlags(WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
         }
+        setCancelable(cancelAble)
+        setCanceledOnTouchOutside(cancelAble)
         initView()
         initData()
         initListener()

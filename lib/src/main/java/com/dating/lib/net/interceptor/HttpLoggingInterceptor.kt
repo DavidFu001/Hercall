@@ -293,9 +293,9 @@ class HttpLoggingInterceptor @JvmOverloads constructor(
                     }.onFailure {
 
                     }.onSuccess {
-                        val code = jsonObject.optInt("je", -1)
+                        val code = jsonObject.optInt("p", -1)
                         val msg = jsonObject.optString("msg")
-                        val data = jsonObject.optString("wpsf")
+                        val data = jsonObject.optString("bcmt")
                         when (code) {
                             Const.HttpCode.SUCCESS -> {
                                 val body =
